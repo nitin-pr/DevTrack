@@ -1,1 +1,26 @@
-[]
+[
+  {
+    "id": 1,
+    "name": "Nitin Prajapati",
+    "email": "nitin@devtrack.io",
+    "team": "backend"
+  },
+  {
+    "id": 2,
+    "name": "Asha Rao",
+    "email": "asha@devtrack.io",
+    "team": "frontend"
+  },
+  {
+    "id": 3,
+    "name": "Marcus Lee",
+    "email": "marcus@devtrack.io",
+    "team": "devops"
+  },
+  {
+    "id": 4,
+    "name": "Priya Nair",
+    "email": "priya@devtrack.io",
+    "team": "backend"
+  }
+]
