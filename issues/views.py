@@ -87,6 +87,8 @@ def create_issue(request):
         else:
             issue = Issue(**kwargs)
         issue.validate()
+        if not any(r['id'] == issue.reporter_id for r in read_reporters()):
+            raise ValueError(f'Reporter {issue.reporter_id} does not exist')
     except (KeyError, json.JSONDecodeError) as e:
         return JsonResponse({'error': f'Missing or invalid field: {e}'}, status=400)
     except ValueError as e:

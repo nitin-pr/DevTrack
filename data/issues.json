@@ -61,5 +61,185 @@
     "priority": "high",
     "reporter_id": 3,
     "created_at": "2026-08-08 17:00:01.400051"
+  },
+  {
+    "id": 8,
+    "title": "Search returns stale results after filter change",
+    "description": "Changing a filter does not invalidate the cached search response",
+    "status": "open",
+    "priority": "medium",
+    "reporter_id": 6,
+    "created_at": "2026-08-08 17:00:01.470112"
+  },
+  {
+    "id": 9,
+    "title": "Export to CSV truncates rows over 1000",
+    "description": "Large exports silently cut off instead of paginating or streaming",
+    "status": "in_progress",
+    "priority": "high",
+    "reporter_id": 5,
+    "created_at": "2026-08-08 17:00:01.540218"
+  },
+  {
+    "id": 10,
+    "title": "Duplicate notifications sent for same event",
+    "description": "Webhook retry logic re-sends notifications instead of deduping",
+    "status": "open",
+    "priority": "critical",
+    "reporter_id": 8,
+    "created_at": "2026-08-08 17:00:01.610334"
+  },
+  {
+    "id": 11,
+    "title": "Settings page layout breaks on small screens",
+    "description": "Sidebar overlaps main content below 480px viewport width",
+    "status": "open",
+    "priority": "low",
+    "reporter_id": 9,
+    "created_at": "2026-08-08 17:00:01.680442"
+  },
+  {
+    "id": 12,
+    "title": "API returns 500 when reporter_id is missing",
+    "description": "Should return a 400 validation error instead of an unhandled exception",
+    "status": "resolved",
+    "priority": "medium",
+    "reporter_id": 7,
+    "created_at": "2026-08-08 17:00:01.750551"
+  },
+  {
+    "id": 13,
+    "title": "Slack integration stops posting after token refresh",
+    "description": "OAuth token refresh is not persisted, integration silently goes dead",
+    "status": "open",
+    "priority": "high",
+    "reporter_id": 3,
+    "created_at": "2026-08-08 17:00:01.820667"
+  },
+  {
+    "id": 14,
+    "title": "Bulk delete does not confirm before removing issues",
+    "description": "Missing confirmation modal on the bulk delete action",
+    "status": "closed",
+    "priority": "medium",
+    "reporter_id": 9,
+    "created_at": "2026-08-08 17:00:01.890771"
+  },
+  {
+    "id": 15,
+    "title": "Memory leak in long-running worker process",
+    "description": "Worker RSS grows unbounded over 24h, requires manual restart",
+    "status": "in_progress",
+    "priority": "critical",
+    "reporter_id": 8,
+    "created_at": "2026-08-08 17:00:01.960889"
+  },
+  {
+    "id": 16,
+    "title": "Timezone mismatch in issue timestamps",
+    "description": "Timestamps are stored in UTC but displayed as if local, off by several hours",
+    "status": "open",
+    "priority": "medium",
+    "reporter_id": 1,
+    "created_at": "2026-08-08 17:00:02.030991"
+  },
+  {
+    "id": 17,
+    "title": "Cannot reassign issue to a different reporter",
+    "description": "PATCH endpoint for reporter_id is not implemented yet",
+    "status": "open",
+    "priority": "low",
+    "reporter_id": 4,
+    "created_at": "2026-08-08 17:00:02.101104"
+  },
+  {
+    "id": 18,
+    "title": "Flaky test: test_pagination_last_page",
+    "description": "Test occasionally fails due to shared mutable fixture state",
+    "status": "resolved",
+    "priority": "low",
+    "reporter_id": 6,
+    "created_at": "2026-08-08 17:00:02.171207"
+  },
+  {
+    "id": 19,
+    "title": "Rate limiter blocks legitimate burst traffic",
+    "description": "Threshold too aggressive for known partner integrations",
+    "status": "open",
+    "priority": "high",
+    "reporter_id": 3,
+    "created_at": "2026-08-08 17:00:02.241329"
+  },
+  {
+    "id": 20,
+    "title": "Onboarding checklist does not persist completion state",
+    "description": "Checklist resets to unchecked on every page reload",
+    "status": "in_progress",
+    "priority": "medium",
+    "reporter_id": 11,
+    "created_at": "2026-08-08 17:00:02.311439"
+  },
+  {
+    "id": 21,
+    "title": "Broken link in password reset email template",
+    "description": "Reset link points to staging URL in production emails",
+    "status": "open",
+    "priority": "critical",
+    "reporter_id": 10,
+    "created_at": "2026-08-08 17:00:02.381546"
+  },
+  {
+    "id": 22,
+    "title": "Issue list sort by priority is alphabetical, not severity order",
+    "description": "critical/high/medium/low should sort by severity, not string order",
+    "status": "open",
+    "priority": "low",
+    "reporter_id": 2,
+    "created_at": "2026-08-08 17:00:02.451651"
+  },
+  {
+    "id": 23,
+    "title": "File upload accepts files larger than documented limit",
+    "description": "Backend does not enforce the 10MB limit advertised in the UI",
+    "status": "open",
+    "priority": "medium",
+    "reporter_id": 12,
+    "created_at": "2026-08-08 17:00:02.521767"
+  },
+  {
+    "id": 24,
+    "title": "Audit log missing entries for bulk actions",
+    "description": "Only single-record mutations are written to the audit log",
+    "status": "closed",
+    "priority": "high",
+    "reporter_id": 7,
+    "created_at": "2026-08-08 17:00:02.591870"
+  },
+  {
+    "id": 25,
+    "title": "Keyboard navigation skips modal close button",
+    "description": "Tab order in the issue detail modal is not accessible",
+    "status": "open",
+    "priority": "low",
+    "reporter_id": 9,
+    "created_at": "2026-08-08 17:00:02.661974"
+  },
+  {
+    "id": 26,
+    "title": "Concurrent writes to issues.json can lose updates",
+    "description": "No file locking, two simultaneous writes can clobber each other",
+    "status": "in_progress",
+    "priority": "critical",
+    "reporter_id": 1,
+    "created_at": "2026-08-08 17:00:02.732083"
+  },
+  {
+    "id": 27,
+    "title": "Health check endpoint does not verify data directory is writable",
+    "description": "Service reports healthy even when disk is full or read-only",
+    "status": "open",
+    "priority": "medium",
+    "reporter_id": 8,
+    "created_at": "2026-08-08 17:00:02.802191"
   }
 ]
